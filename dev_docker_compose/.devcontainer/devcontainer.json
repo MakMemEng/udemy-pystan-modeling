@@ -1,0 +1,46 @@
+{
+    "name": "docker-python-bayesian",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "playground",
+    "workspaceFolder": "/notebook",
+
+    "postCreateCommand": "poetry install",
+
+    // Configure tool-specific properties.
+    "customizations": {
+        "settings": {
+            "python.formatting.provider": "none",
+            "python.linting.pylintEnabled": false,
+            "python.linting.lintOnSave": true,
+            // "python.defaultInterpreterPath": "/opt/conda/bin/python",
+            "[python]": {
+                "editor.formatOnPaste": true,
+                "editor.defaultFormatter": "charliermarsh.ruff",
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.fixAll": true
+                }
+            },
+            "ruff.lint.args": ["--select=E,W,F,B,I,N,A,UP,C4,PL,PD,NPY,C90,COM"]
+        },
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "seatonjiang.gitmoji-vscode",
+                "ms-python.python",
+                "ms-python.jupyter",
+                "ms-python.vscode-pylance",
+                "njpwerner.autodocstring",
+                "mosapride.zenkaku",
+                "streetsidesoftware.code-spell-checker",
+                "charliermarsh.ruff",
+                "KevinRose.vsc-python-indent",
+                "seatonjiang.gitmoji-vscode",
+                "usernamehw.errorlens",
+                "EditorConfig.EditorConfig"
+            ]
+        }
+    },
+    "forwardPorts": [8888]
+}
