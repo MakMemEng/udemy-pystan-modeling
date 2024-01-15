@@ -1,0 +1,43 @@
+{
+    "name": "Python 3",
+    "build": { "dockerfile": "Dockerfile" },
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "18"
+        }
+    },
+    "workspaceFolder": "/notebook/",
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "poetry install",
+    // "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "seatonjiang.gitmoji-vscode",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "vscode-icons-team.vscode-icons",
+                "njpwerner.autodocstring",
+                "mosapride.zenkaku",
+                "streetsidesoftware.code-spell-checker",
+                "EditorConfig.EditorConfig",
+                "ms-python.flake8",
+                "ms-python.autopep8",
+                "ms-python.black-formatter"
+            ]
+        }
+    }
+    // ,
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+}

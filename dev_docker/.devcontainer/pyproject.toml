@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "docker-pystan"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+# pystan = "3.6.0"
+arviz = "^0.16.1"
+factor-analyzer = "^0.5.0"
+ipykernel = "^6.25.1"
+ipython = "^8.14.0"
+japanize-matplotlib = "^1.1.3"
+jupyterlab = "^4.0.5"
+matplotlib = "^3.7.2"
+numpy = "^1.25.2"
+pandas = "^2.0.3"
+polars = "^0.18.15"
+pillow = "^10.0.0"
+pip = "^23.2.1"
+pyarrow = "^12.0.1"
+python-dotenv = "^1.0.0"
+scikit-learn = "^1.3.0"
+scipy = "1.9.3"
+seaborn = "^0.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
